@@ -3,69 +3,437 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Euthy Journal Terms of Service - Learn about your rights, content ownership, data responsibilities, and guidelines for using the app.">
     <title>Euthy Journal - Terms of Service</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="icon.png">
+    
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #f9f9f9; }
-        .container { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { font-size: 2.5rem; margin-bottom: 40px; color: #000; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        h2 { font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; color: #222; }
-        p { margin-bottom: 20px; color: #555; }
-        .footer { margin-top: 60px; text-align: center; font-size: 0.9rem; color: #888; border-top: 1px solid #eee; padding-top: 20px; }
-        .back-link { margin-bottom: 20px; display: inline-block; text-decoration: none; color: #386B40; font-weight: 600; }
+        :root {
+            --bg-color: #0b0d10;
+            --accent-green: #386b40;
+            --accent-light: #64b370;
+            --text-primary: #ffffff;
+            --text-secondary: #d2ded5;
+            --text-muted: #8ba192;
+            --glass-bg: rgba(255, 255, 255, 0.035);
+            --glass-border: rgba(255, 255, 255, 0.09);
+            --glass-hover: rgba(255, 255, 255, 0.06);
+            --card-radius: 24px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.85;
+            overflow-x: hidden;
+            position: relative;
+            padding-top: 100px;
+        }
+
+
+
+        /* Navigation Header */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(11, 13, 16, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 8%;
+            z-index: 1000;
+        }
+
+        .logo-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .logo-box {
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, var(--accent-light) 0%, var(--accent-green) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(56, 107, 64, 0.3);
+        }
+
+        .logo-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-back:hover {
+            background: var(--glass-hover);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Document Container Layout */
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 8%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .doc-header {
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 24px;
+        }
+
+        .doc-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Two-column layout */
+        .doc-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sidebar table of contents */
+        .doc-sidebar {
+            position: sticky;
+            top: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .doc-sidebar h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .toc-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            line-height: 1.4;
+            display: block;
+        }
+
+        .toc-list a:hover {
+            color: var(--accent-light);
+            transform: translateX(4px);
+        }
+
+        /* Main reading sheet */
+        .doc-body {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--card-radius);
+            padding: 48px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            scroll-margin-top: 100px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            padding: 40px 8%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 40px auto 0;
+            z-index: 10;
+            position: relative;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .doc-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .doc-sidebar {
+                display: none;
+            }
+
+            .doc-body {
+                padding: 30px 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 5%;
+            }
+            .nav-links {
+                display: none;
+            }
+            .wrapper {
+                padding: 30px 5%;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            footer {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="back-link">&larr; Back to Portal</a>
-        <h1>Terms of Service</h1>
-        
-        <h2>1. Acceptance of Terms</h2>
-        <p>By using Euthy Journal, you agree to these terms. Euthy Journal is created and operated by Yhonathon Maharaj. If you do not agree, please do not use the app.</p>
 
-        <h2>2. Age Requirement</h2>
-        <p>You must be at least 13 years of age to use Euthy Journal. By using the app, you represent that you meet this age requirement. If you are under 13, you may only use the app with the involvement and consent of a parent or legal guardian.</p>
+    <!-- Nav Bar -->
+    <nav>
+        <a href="index.html" class="logo-wrap">
+            <div class="logo-box">
+                <img src="icon.png" alt="Euthy Journal Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+            </div>
+            <span class="logo-title">Euthy Journal</span>
+        </a>
+        <a href="index.html" class="btn-back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Home
+        </a>
+    </nav>
 
-        <h2>3. Ownership of Content</h2>
-        <p>You retain 100% ownership of everything you write, record, or upload to Euthy Journal. We do not claim any rights to your data. Your journal data is stored privately on your device and, if you choose to enable Automated Cloud Backups, your personal Apple iCloud or Google Drive account. It is never stored on our servers.</p>
-
-        <h2>4. Data Responsibility & Loss</h2>
-        <p>Euthy Journal is a local-first application. This means your journal data primarily lives on your device and may also exist in backup archives within your personal cloud account. We are not responsible for any data loss resulting from device failure, app deletion, loss of your device, account security breaches, failed backups, corrupted files, personal cloud storage limits, or connectivity issues. It is your responsibility to manage your own cloud account and security.</p>
-
-        <h2>5. Not Medical Advice</h2>
-        <p>Euthy Journal provides tools for self-reflection and personal insights. It is NOT a medical device and is NOT intended to diagnose, treat, cure, or prevent any mental or physical health condition. The 'Insights', 'Recovery Signals', 'Health Correlations', and 'Mood Tracking' features are for informational purposes only. Always seek the advice of a physician or other qualified health provider with any questions you may have regarding a medical condition. NEVER DISREGARD PROFESSIONAL MEDICAL ADVICE OR DELAY SEEKING IT BECAUSE OF SOMETHING YOU HAVE READ IN THIS APP.</p>
-        <p>Euthy Journal is not a crisis service. If you are experiencing a mental health emergency, please contact local emergency services or a crisis hotline immediately.</p>
-
-        <h2>6. Imports, Exports & Third-Party Services</h2>
-        <p>Euthy Journal can import supported backup and export files from Euthy Journal and certain third-party journal apps. Imports may overwrite existing data, so you should create a current backup before importing. Third-party app names are used only to describe compatible export formats. Day One, Journey, Daylio, Diarly, Diarium, and Stoic are trademarks of their respective owners. Euthy Journal is not affiliated with or endorsed by them.</p>
-
-        <h2>7. Premium Subscriptions</h2>
-        <p>Premium features are billed on a subscription basis. Payments are handled by the Apple App Store or Google Play Store. You can manage or cancel your subscription at any time through your device's store settings.</p>
-
-        <h2>8. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, Euthy Journal is provided "as is" and "as available" without warranties of any kind. We are not liable for indirect, incidental, special, consequential, or punitive damages, including lost journal entries, lost backups, data corruption, or loss of access to the app.</p>
-
-        <h2>9. Analytics & Optimization</h2>
-        <p>We may use analytics, performance monitoring, and crash reporting to improve app stability and performance. These services may collect technical diagnostics and anonymous usage patterns such as app version, device model, operating system version, crash logs, and feature interactions. They do not collect your private journal entries, photos, drawings, voice notes, routines, saved health snapshots, or other private journal content.</p>
-
-        <h2>10. Backend, API & Cloud Features</h2>
-        <p>We may add backend, account, API, or optional cloud-connected features in the future. Those services may be used to provide requested app functionality, subscription support, cloud backups, or account-related features. We will not use backend services to store or analyze your private journal content unless a feature clearly asks for your permission and you choose to enable it.</p>
-
-        <h2>11. Cloud Integration</h2>
-        <p>When using Google Drive or iCloud for backups, you are subject to their respective terms. We only request the minimum permissions necessary to store and retrieve your journal backups. Euthy Journal utilizes restricted app-specific storage; we do not have access to your account credentials or any data outside of the Euthy Journal backup files.</p>
-
-        <h2>12. Third-Party Map and Location Services</h2>
-        <p>Euthy Journal utilizes native map services (such as Apple Maps or Google Maps) to provide location tagging and map viewing features. By using these features, you also agree to be bound by the respective Terms of Service of those third-party map providers. Euthy Journal is not responsible for the accuracy of geocoding data or map displays provided by these third parties.</p>
-
-        <h2>13. Changes to Terms</h2>
-        <p>We may update these terms from time to time. Your continued use of the app after changes are made constitutes your acceptance of the new terms.</p>
-
-        <h2>14. Contact Us</h2>
-        <p>If you have any questions about these Terms, please contact us at: <strong>euthylabs@gmail.com</strong></p>
-        <p><em>Last Updated: May 2026</em></p>
-
-        <div class="footer">
-            &copy; 2026 Euthy Journal. All rights reserved.
+    <main class="wrapper">
+        <div class="doc-header">
+            <h1>Terms of Service</h1>
+            <div class="doc-meta">Last Updated: May 2026 &bull; Agreement Guidelines</div>
         </div>
-    </div>
+
+        <div class="doc-layout">
+            <!-- Sidebar Navigation -->
+            <aside class="doc-sidebar">
+                <h4>Sections</h4>
+                <ul class="toc-list">
+                    <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+                    <li><a href="#age">2. Age Requirement</a></li>
+                    <li><a href="#ownership">3. Ownership of Content</a></li>
+                    <li><a href="#responsibility">4. Data Responsibility & Loss</a></li>
+                    <li><a href="#medical">5. Not Medical Advice</a></li>
+                    <li><a href="#imports">6. Imports & Compatibility</a></li>
+                    <li><a href="#subscriptions">7. Premium Subscriptions</a></li>
+                    <li><a href="#liability">8. Limitation of Liability</a></li>
+                    <li><a href="#analytics">9. Analytics & Optimization</a></li>
+                    <li><a href="#cloud">10. Backend & Cloud Features</a></li>
+                    <li><a href="#integration">11. Cloud Integration</a></li>
+                    <li><a href="#maps">12. Maps & Location Services</a></li>
+                    <li><a href="#changes">13. Changes to Terms</a></li>
+                    <li><a href="#contact">14. Contact Support</a></li>
+                </ul>
+            </aside>
+
+            <!-- Document Text -->
+            <article class="doc-body">
+                <!-- 1. Acceptance of Terms -->
+                <h2 id="acceptance">1. Acceptance of Terms</h2>
+                <p>By using Euthy Journal, you agree to these terms. Euthy Journal is created and operated by Yhonathon Maharaj. If you do not agree, please do not use the app.</p>
+
+                <!-- 2. Age Requirement -->
+                <h2 id="age">2. Age Requirement</h2>
+                <p>You must be at least 13 years of age to use Euthy Journal. By using the app, you represent that you meet this age requirement. If you are under 13, you may only use the app with the involvement and consent of a parent or legal guardian.</p>
+
+                <!-- 3. Ownership of Content -->
+                <h2 id="ownership">3. Ownership of Content</h2>
+                <p>You retain 100% ownership of everything you write, record, or upload to Euthy Journal. We do not claim any rights to your data. Your journal data is stored privately on your device and, if you choose to enable Automated Cloud Backups, your personal Apple iCloud or Google Drive account. It is never stored on our servers.</p>
+
+                <!-- 4. Data Responsibility & Loss -->
+                <h2 id="responsibility">4. Data Responsibility & Loss</h2>
+                <p>Euthy Journal is a local-first application. This means your journal data primarily lives on your device and may also exist in backup archives within your personal cloud account. We are not responsible for any data loss resulting from device failure, app deletion, loss of your device, account security breaches, failed backups, corrupted files, personal cloud storage limits, or connectivity issues. It is your responsibility to manage your own cloud account and security.</p>
+
+                <!-- 5. Not Medical Advice -->
+                <h2 id="medical">5. Not Medical Advice</h2>
+                <p>Euthy Journal provides tools for self-reflection and personal insights. It is NOT a medical device and is NOT intended to diagnose, treat, cure, or prevent any mental or physical health condition. The 'Insights', 'Recovery Signals', 'Health Correlations', and 'Mood Tracking' features are for informational purposes only. Always seek the advice of a physician or other qualified health provider with any questions you may have regarding a medical condition. <strong>NEVER DISREGARD PROFESSIONAL MEDICAL ADVICE OR DELAY SEEKING IT BECAUSE OF SOMETHING YOU HAVE READ IN THIS APP.</strong></p>
+                <p>Euthy Journal is not a crisis service. If you are experiencing a mental health emergency, please contact local emergency services or a crisis hotline immediately.</p>
+
+                <!-- 6. Imports, Exports & Compatibility -->
+                <h2 id="imports">6. Imports, Exports & Third-Party Services</h2>
+                <p>Euthy Journal can import supported backup and export files from Euthy Journal and certain third-party journal apps. Imports may overwrite existing data, so you should create a current backup before importing. Third-party app names are used only to describe compatible export formats. Day One, Journey, Daylio, Diarly, Diarium, and Stoic are trademarks of their respective owners. Euthy Journal is not affiliated with or endorsed by them.</p>
+
+                <!-- 7. Premium Subscriptions -->
+                <h2 id="subscriptions">7. Premium Subscriptions</h2>
+                <p>Premium features are billed on a subscription basis. Payments are handled by the Apple App Store or Google Play Store. You can manage or cancel your subscription at any time through your device's store settings.</p>
+
+                <!-- 8. Limitation of Liability -->
+                <h2 id="liability">8. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by law, Euthy Journal is provided "as is" and "as available" without warranties of any kind. We are not liable for indirect, incidental, special, consequential, or punitive damages, including lost journal entries, lost backups, data corruption, or loss of access to the app.</p>
+
+                <!-- 9. Analytics & Optimization -->
+                <h2 id="analytics">9. Analytics & Optimization</h2>
+                <p>We may use analytics, performance monitoring, and crash reporting to improve app stability and performance. These services may collect technical diagnostics and anonymous usage patterns such as app version, device model, operating system version, crash logs, and feature interactions. They do not collect your private journal entries, photos, drawings, voice notes, routines, saved health snapshots, or other private journal content.</p>
+
+                <!-- 10. Backend, API & Cloud Features -->
+                <h2 id="cloud">10. Backend, API & Cloud Features</h2>
+                <p>We may add backend, account, API, or optional cloud-connected features in the future. Those services may be used to provide requested app functionality, subscription support, cloud backups, or account-related features. We will not use backend services to store or analyze your private journal content unless a feature clearly asks for your permission and you choose to enable it.</p>
+
+                <!-- 11. Cloud Integration -->
+                <h2 id="integration">11. Cloud Integration</h2>
+                <p>When using Google Drive or iCloud for backups, you are subject to their respective terms. We only request the minimum permissions necessary to store and retrieve your journal backups. Euthy Journal utilizes restricted app-specific storage; we do not have access to your account credentials or any data outside of the Euthy Journal backup files.</p>
+
+                <!-- 12. Third-Party Map and Location Services -->
+                <h2 id="maps">12. Third-Party Map and Location Services</h2>
+                <p>Euthy Journal utilizes native map services (such as Apple Maps or Google Maps) to provide location tagging and map viewing features. By using these features, you also agree to be bound by the respective Terms of Service of those third-party map providers. Euthy Journal is not responsible for the accuracy of geocoding data or map displays provided by these third parties.</p>
+
+                <!-- 13. Changes to Terms -->
+                <h2 id="changes">13. Changes to Terms</h2>
+                <p>We may update these terms from time to time. Your continued use of the app after changes are made constitutes your acceptance of the new terms.</p>
+
+                <!-- 14. Contact Us -->
+                <h2 id="contact">14. Contact Us</h2>
+                <p>If you have any questions about these Terms, please contact us at: <a href="mailto:euthylabs@gmail.com"><strong>euthylabs@gmail.com</strong></a></p>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">
+            <img src="icon.png" alt="Euthy Journal Logo" style="width: 20px; height: 20px; object-fit: contain; border-radius: 4px;">
+            <span style="font-family: 'Outfit', sans-serif; font-weight: 700; color: #ffffff;">Euthy Journal</span>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <span>&copy; 2026 Euthy Labs. All rights reserved.</span>
+            <span style="opacity: 0.4;">&bull;</span>
+            <span style="color: var(--accent-light); font-weight: 500;">Cookie-Free Website</span>
+        </div>
+    </footer>
 </body>
 </html>
