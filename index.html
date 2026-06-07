@@ -57,8 +57,11 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
         }
 
-        html {
+        html, body {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
         }
 
         body {
@@ -66,7 +69,6 @@
             background-color: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.75;
-            overflow-x: hidden;
             position: relative;
         }
 
@@ -937,6 +939,22 @@
                 flex-direction: column;
                 gap: 16px;
                 text-align: center;
+            }
+            .floating-card {
+                display: none; /* Hide off-screen floating cards on mobile to prevent overflow-x */
+            }
+            .pricing-table-wrap {
+                overflow-x: auto; /* Allow horizontal swipe of pricing table on mobile */
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem; /* Prevent large title text overflow on small viewports */
+            }
+            .hero-desc {
+                font-size: 1.05rem;
             }
         }
     </style>
